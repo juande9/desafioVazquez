@@ -8,7 +8,8 @@ function validarNumero(solicitud) {
     while (isNaN(num)) {
         alert("El número es incorrecto.");
         num = parseInt(prompt("Ingrese un número entero para usar como " + solicitud));
-    } return num
+    }
+    return num
 }
 
 // /**
