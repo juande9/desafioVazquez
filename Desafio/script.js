@@ -1,10 +1,18 @@
 ValortiposDeCambio = []
 NombreCambio = ["Oficial", "Blue", "Cripto", "CCL"]
 
+/**
+ * Función que pushea el valor de los distintos tipos de cambio.
+ * @param {string} NombreCambio Muestra el tipo de cambio que se debe ingresar.
+ */
 function cotizacion(NombreCambio) {
     ValortiposDeCambio.push(parseFloat(prompt("Ingrese cotización: " + NombreCambio)))
 }
 
+/**
+ * Función que transforma la cotización de Pesos a USD. Se le pide al usuario que Tipo de Cambio toma para el calculo, basandose en lo que ingreso anteriormente.
+ * @param {*} pesos Parametro donde pasa la cantidad de pesos a transformar
+ */
 function cotizarDolar(pesos) {
     let cotizacion = prompt("¿Que dolar desea tomar?\n1) Oficial\n2) BLUE\n3) Cripto\n4) CCL")
     switch (cotizacion) {
@@ -25,6 +33,10 @@ function cotizarDolar(pesos) {
     }
 }
 
+/**
+ * Idem Funcion anterior pero de Dolares a Pesos.
+ * @param {*} dolar Cantidad de dolares a transformar.
+ */
 function cotizarPesos(dolar) {
     let cotizacion = prompt("¿Que dolar desea tomar?\n1) Oficial\n2) BLUE\n3) Cripto\n4) CCL")
     switch (cotizacion) {
@@ -45,10 +57,16 @@ function cotizarPesos(dolar) {
     }
 }
 
+/**
+ * Ciclo en donde se ingresan los distintos tipos de Cambio
+ */
 for (i = 0; i < 4; i++) {
     cotizacion(NombreCambio[i]);
 }
 
+/**
+ * Inicio del circuito.
+ */
 let opcion = prompt("Ingrese 1 si desea convertir pesos a USD.\nIngrese 2 si desea convertir USD a pesos.\nIngrese cualquier otro caracter para salir.")
 switch (opcion) {
     case "1":
